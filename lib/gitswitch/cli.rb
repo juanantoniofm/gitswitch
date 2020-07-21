@@ -99,8 +99,8 @@ class Gitswitch
       end
 
       puts "Adding a new gitswitch user entry for tag '#{tag}'"
-      (email, name) = prompt_for_email_and_name
-      Gitswitch.set_gitswitch_entry(tag, email, name)
+     (email, name) = prompt_for_email_and_name # TODO: Should also talk about sshCommand
+      Gitswitch.set_gitswitch_entry(tag, email, name) # TODO: ssh
       exit EXIT_OK
     end
 
@@ -117,8 +117,8 @@ class Gitswitch
       end
       
       puts "Updating #{tag} entry..."
-      (email, name) = prompt_for_email_and_name
-      Gitswitch.set_gitswitch_entry(tag, email, name)
+      (email, name) = prompt_for_email_and_name # TODO: Should also talk about sshCommand
+      Gitswitch.set_gitswitch_entry(tag, email, name) # TODO: ssh
       exit EXIT_OK
     end
 
@@ -142,7 +142,7 @@ class Gitswitch
     
 
     ######################################################################
-    def prompt_for_email_and_name 
+    def prompt_for_email_and_name  # TODO: Should also talk about sshCommand
       email = ask("  E-mail address: ").chomp
       ## TODO: Validate e-mail
       if email.nil?
@@ -155,8 +155,8 @@ class Gitswitch
       if name.nil?
         puts "No name provided"
       end
-
-      return [email, name]
+ # TODO: Should also talk about sshCommand
+      return [email, name] # TODO: ssh
     end
 
   
