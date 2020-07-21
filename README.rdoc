@@ -1,4 +1,12 @@
-= gitswitch
+= gitswitch (FORK)
+
+This is a personal fork, to try and add the ssh key change as well.
+
+I would like to use this tool to ensure that I use a different ssh key on the different identities.
+I don't know much about Ruby, but they say it's easy right? Let's see how easy it can be :D 
+
+
+
 
 {<img src="https://travis-ci.org/joealba/gitswitch.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/joealba/gitswitch]
 
