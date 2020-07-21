@@ -18,6 +18,7 @@ class Gitswitch
     
       %x(#{GIT_BIN} #{git_args} user.email #{user[:email].to_s.shellescape})
       %x(#{GIT_BIN} #{git_args} user.name #{user[:name].to_s.shellescape}) if !user[:name].to_s.empty?
+      %x(#{GIT_BIN} #{git_args} core.sshCommand #{user[:ssh].to_s.shellescape}) if !user[:ssh].to_s.empty?
     end
 
     def self.get_git_user_info(options = {})
@@ -27,6 +28,7 @@ class Gitswitch
       {
         :name => %x(#{GIT_BIN} #{git_args} user.name).to_s.chomp,
         :email => %x(#{GIT_BIN} #{git_args} user.email).to_s.chomp
+        :ssh => %x(#{GIT_BIN} #{git_args} core.sshCommand).to_s.chomp
       } 
     end
 
